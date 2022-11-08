@@ -2,26 +2,45 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import NewsComp from './components/NewsComp';
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
-  //apple button after clicking 
-
   return (
     <>
-    <div>
+
+    <Router>
 
     <NavBar></NavBar>
+    <div  id='mainpage'>
+      <Routes>
+          <Route exact path='/'  element={<NewsComp key="general" category="general" pageSize={12}/>}>
+          </Route>
+
+          <Route exact path='/sports' element={<NewsComp key="sports" category="sports" pageSize={12}/>}>           
+          </Route>
+
+         <Route exact path='/entertainment' element={<NewsComp key="entertainment" category="entertainment" pageSize={12}/>}>
+          </Route>
+
+         <Route exact path='/science'  element={<NewsComp key="science" category="science" pageSize={12}/>}>
+        </Route>
+
+         <Route exact path='/business' element={<NewsComp  key="business" category="business" pageSize={12}/>}>
+        </Route>
+
+         <Route exact path='/technology' element={<NewsComp  key="technology" category="technology" pageSize={12}/>}>
+        </Route>
+
+         <Route exact path='/health' element={<NewsComp  key="health" category="health" pageSize={12}/>}>
+        </Route>
+
+      </Routes>
     </div>
-
-
-<div  id='mainpage'>
-
-    {/* <NewsComp link="https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=0ac3e32e761f4e089fd6df148c31c4ff" pageSize={8}  headline={"Tesla"}/> */}
-    <NewsComp link="https://newsapi.org/v2/top-headlines?country=in&apiKey=0ac3e32e761f4e089fd6df148c31c4ff" pageSize={8}  headline={"India's"}/>
-   {/* <NewsComp link="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=0ac3e32e761f4e089fd6df148c31c4ff" pageSize={8}  headline={"Business"}/> */}
-
-</div>
+    </Router>
     </>
   );
 }

@@ -14,7 +14,7 @@ export default class News extends Component {
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>
                 {/* <p className="card-text">{date}.</p>  no need for unique*/}
-                <a href={newsUrl}  className="btn btn-success">Read More</a> {/* //keepthe same name as props statement */}
+                <a href={newsUrl}  className="btn btn-dark">Read More</a> {/* //keepthe same name as props statement */}
               </div>
           </div>
       </div>

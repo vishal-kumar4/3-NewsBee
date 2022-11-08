@@ -152,18 +152,15 @@ export default class NewsComp extends Component {
 
 constructor(){
   super();
-  console.log("hello paaji")
   this.state={
       articles:[],   //hence we are i itializing this as empty array 
       loading:false,
-
-
     }
   }
 
 
   async componentDidMount(){
-      let url=`${this.props.link}&page=${1}&pageSize=${this.props.pageSize}`;
+      let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=72e9732e042940ec8f249f6938c8951a&page=${1}&pageSize=${this.props.pageSize}`;
       this.setState({loading:true})
       let data=await fetch(url);
       let parseData=await data.json();
@@ -178,7 +175,7 @@ constructor(){
 
   // first button
    previClickHandle = async ()=>{
-    let url=`${this.props.link}&page=${1}&pageSize=${this.props.pageSize}`;
+    let url=`https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=0ac3e32e761f4e089fd6df148c31c4ff&page=${1}&pageSize=${this.props.pageSize}`;
     this.setState({loading:true})
     let data=await fetch(url);
     let parseData=await data.json();
@@ -191,7 +188,7 @@ constructor(){
 
   // handle 2nd page
    handle2 = async ()=>{
-    let url=`${this.props.link}&page=${2}&pageSize=${this.props.pageSize}`;
+    let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=72e9732e042940ec8f249f6938c8951a&page=${2}&pageSize=${this.props.pageSize}`;
     this.setState({loading:true})
     let data=await fetch(url);
     let parseData=await data.json();
@@ -204,7 +201,7 @@ constructor(){
 
   //handle 3
    handle3 = async ()=>{
-    let url=`${this.props.link}&page=${3}&pageSize=${this.props.pageSize}`;
+    let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=72e9732e042940ec8f249f6938c8951a&page=${3}&pageSize=${this.props.pageSize}`;
     this.setState({loading:true})
     let data=await fetch(url);
     let parseData=await data.json();
@@ -224,7 +221,7 @@ constructor(){
   // last button
   nextClickHandle = async ()=>{
     console.log("!previous");
-    let url=`${this.props.link}&page=${4}&pageSize=${this.props.pageSize}`;
+    let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=72e9732e042940ec8f249f6938c8951a&page=${4}&pageSize=${this.props.pageSize}`;
     this.setState({loading:true})
     let data=await fetch(url);
     let parseData=await data.json();
@@ -239,7 +236,7 @@ constructor(){
     return (
       <div className='container my-3'>
               <div className="row my-3">
-                <h1 className="text-center">Top {  this.props.headline } Headlines </h1>
+                <h1 className="text-center">Top Headlines </h1>
                 {this.state.loading && <div className="container text-center my-3"><Spinner></Spinner></div>}
                 
                 {!this.state.loading && this.state.articles.map((element)=>{
@@ -250,10 +247,10 @@ constructor(){
               </div>
               
               <div className="d-flex bd-highlight">
-              <button  disabled={this.state.page===1} type="button" className="btn flex-fill bd-highlight btn-success mx-1 my-3" onClick={this.previClickHandle}>First</button>
-              <button  disabled={this.state.page===2} type="button" className="btn flex-fill bd-highlight btn-success mx-1 my-3" onClick={this.handle2}>2nd Page</button>
-              <button  disabled={this.state.page===3} type="button" className="btn flex-fill bd-highlight btn-success mx-1 my-3" onClick={this.handle3}>3rd Page</button>
-              <button  disabled={this.state.page===4}  type="button" className="btn flex-fill bd-highlight btn-success mx-1 my-3" onClick={this.nextClickHandle}>Last</button>
+              <button  disabled={this.state.page===1} type="button" className="btn flex-fill bd-highlight btn-dark mx-1 my-3" onClick={this.previClickHandle}>First</button>
+              <button  disabled={this.state.page===2} type="button" className="btn flex-fill bd-highlight btn-dark mx-1 my-3" onClick={this.handle2}>2nd Page</button>
+              <button  disabled={this.state.page===3} type="button" className="btn flex-fill bd-highlight btn-dark mx-1 my-3" onClick={this.handle3}>3rd Page</button>
+              <button  disabled={this.state.page===4}  type="button" className="btn flex-fill bd-highlight btn-dark mx-1 my-3" onClick={this.nextClickHandle}>4th page</button>
               </div>
       </div>
     )

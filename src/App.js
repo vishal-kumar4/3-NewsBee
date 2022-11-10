@@ -37,7 +37,7 @@ function App() {
 
          <Route exact path='/health' element={<NewsComp  key="health" category="health" pageSize={12}/>}>
         </Route>
-
+        
       </Routes>
     </div>
     </Router>

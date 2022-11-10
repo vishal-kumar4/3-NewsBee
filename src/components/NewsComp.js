@@ -241,7 +241,7 @@ constructor(){
                 
                 {!this.state.loading && this.state.articles.map((element)=>{
                   return <div className="col-md-3 my-3" key={element.url}>
-                      <News title={element.title?element.title.slice(0,44):"..."} description={element.description?element.description.slice(0,120):"..."} imgurl={element.urlToImage?element.urlToImage:"https://www.devdiscourse.com/remote.axd?https://devdiscourse.blob.core.windows.net/devnews/15_09_2022_13_22_15_5594039.jpg?width=920&format=jpeg"} newsUrl={element.url}/>
+                      <News title={element.title?element.title.slice(0,44):"..."} description={element.description?element.description.slice(0,120):"..."} imgurl={element.urlToImage?element.urlToImage:"https://www.devdiscourse.com/remote.axd?https://devdiscourse.blob.core.windows.net/devnews/15_09_2022_13_22_15_5594039.jpg?width=920&format=jpeg"} newsUrl={element.url} author={element.author?element.author:"unknown"} date={element.publishedAt} source={element.source.name}/>
                     </div>
                 })}
               </div>

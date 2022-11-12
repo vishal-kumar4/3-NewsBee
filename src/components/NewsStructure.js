@@ -20,7 +20,7 @@ export default class News extends Component {
                 By {author} on {d.toUTCString()}
               </small>
             </p>
-            <a href={newsUrl} className="btn btn-dark">
+            <a href={newsUrl} className="btn btn-dark" target='_blank' rel="noreferrer">
               Read More
             </a>{" "}
             {/* //keepthe same name as props statement */}

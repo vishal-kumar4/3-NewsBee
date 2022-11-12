@@ -150,12 +150,13 @@ export default class NewsComp extends Component {
 //     }
 // ]   //----->when using fetch api using the link we dont need thisn articles array as we will be getting from  api itself 
 
-constructor(){
-  super();
+constructor(props){
+  super(props);
   this.state={
       articles:[],   //hence we are i itializing this as empty array 
       loading:false,
-    }
+  }
+      document.title=`NewsBee -  ${this.props.category} articles`
   }
 
 
@@ -236,7 +237,7 @@ constructor(){
     return (
       <div className='container my-3'>
               <div className="row my-3">
-                <h1 className="text-center">Top Headlines </h1>
+                <h1 className="text-center">Top Headlines on {this.props.category}</h1>
                 {this.state.loading && <div className="container text-center my-3"><Spinner></Spinner></div>}
                 
                 {!this.state.loading && this.state.articles.map((element)=>{

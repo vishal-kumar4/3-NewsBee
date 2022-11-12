@@ -9,7 +9,7 @@ export default class News extends Component {
     return (
       <div className="container">
         <div className="card">
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="badge">{source}</span>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" id="badge">{source}</span>
           <img src={imgurl} className="card-img-top" alt="/" />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
@@ -17,10 +17,11 @@ export default class News extends Component {
             {/* <p className="card-text">{date}.</p>  no need for unique*/}
             <p class="card-text">
               <small class="text-muted">
-                By {author} on {d.toUTCString()}
+                By {author} on {d.toUTCString().slice(0,17)} 
+               {/* slice to get only date day month and year and not time and all.  */}
               </small>
             </p>
-            <a href={newsUrl} className="btn btn-dark" target='_blank' rel="noreferrer">
+            <a href={newsUrl} className="btn btn-success" target='_blank' rel="noreferrer">
               Read More
             </a>{" "}
             {/* //keepthe same name as props statement */}

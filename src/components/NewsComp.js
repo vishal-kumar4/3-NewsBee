@@ -248,10 +248,10 @@ constructor(props){
               </div>
               
               <div className="d-flex bd-highlight">
-              <button  disabled={this.state.page===1} type="button" className="btn flex-fill bd-highlight btn-dark mx-1 my-3" onClick={this.previClickHandle}>First</button>
-              <button  disabled={this.state.page===2} type="button" className="btn flex-fill bd-highlight btn-dark mx-1 my-3" onClick={this.handle2}>2nd Page</button>
-              <button  disabled={this.state.page===3} type="button" className="btn flex-fill bd-highlight btn-dark mx-1 my-3" onClick={this.handle3}>3rd Page</button>
-              <button  disabled={this.state.page===4}  type="button" className="btn flex-fill bd-highlight btn-dark mx-1 my-3" onClick={this.nextClickHandle}>4th page</button>
+              <button  disabled={this.state.page===1} type="button" className="btn flex-fill bd-highlight btn-success mx-1 my-3" onClick={this.previClickHandle}>First</button>
+              <button  disabled={this.state.page===2} type="button" className="btn flex-fill bd-highlight btn-success mx-1 my-3" onClick={this.handle2}>2nd Page</button>
+              <button  disabled={this.state.page===3} type="button" className="btn flex-fill bd-highlight btn-success mx-1 my-3" onClick={this.handle3}>3rd Page</button>
+              <button  disabled={this.state.page===4}  type="button" className="btn flex-fill bd-highlight btn-success mx-1 my-3" onClick={this.nextClickHandle}>4th page</button>
               </div>
       </div>
     )

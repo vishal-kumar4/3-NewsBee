@@ -8,7 +8,7 @@ import {
   Route,
 } from "react-router-dom";
 //Pagesize for every page by one variable
-let pagesize=16
+let pagesize=12
 function App() {
   return (
     <>

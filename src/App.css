@@ -17,6 +17,8 @@ span{
 #badge{
     position: relative;
     left: 12%;
+    color: white;
+    background-color: red;
     /* z-index: -1; */
 }
 .start-100 {

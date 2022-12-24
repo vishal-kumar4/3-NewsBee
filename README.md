@@ -1,3 +1,4 @@
+WITH THIS APP WE WILL GET THE DAILY DOSE OF NEWS AS ARTICLES DIRECTLY FETCHED FROM TRUSTED NEWS SITE "NEWS API" . . .WHICH GIVES THE REALTIME NEWS OF THIS INSTANCES.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -23,7 +23,6 @@ const NewsItem = (props)=> {
                         <Link rel="noreferrer" to={newsUrl} target="_blank" className="btn btn-sm btn-dark text-center " id='lotpot'>Read More</Link>
                         </div>
                           
-                        {/* <button ><a href={newsUrl} >klick me</a></button> */}
                     </div>
                 </div>
             </div>

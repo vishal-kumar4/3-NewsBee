@@ -1,3 +1,4 @@
+https://master--effervescent-cobbler-6e48ea.netlify.app/
 WITH THIS APP WE WILL GET THE DAILY DOSE OF NEWS AS ARTICLES DIRECTLY FETCHED FROM TRUSTED NEWS SITE "NEWS API" . . .WHICH GIVES THE REALTIME NEWS OF THIS INSTANCES.
 # Getting Started with Create React App
 
